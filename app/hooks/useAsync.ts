@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+'use client'
+import { DependencyList, useEffect, useState } from 'react'
 
 export enum ResponseStatus {
   idle = 'idle',
@@ -7,33 +8,36 @@ export enum ResponseStatus {
   rejected = 'rejected',
 }
 
-const useFetch = (cb, params) => {
-  const [data, setData] = useState<HarryPotterType[] | []>([])
+type AsyncHandlerType<T> = () => Promise<T>
+
+const useAsync = <T>(handler: AsyncHandlerType<T>, deps: DependencyList = []) => {
+  const [data, setData] = useState<T | null>(null)
   const [status, setStatus] = useState<ResponseStatus>(ResponseStatus.idle)
   const [error, setError] = useState<Error | null>(null)
 
   useEffect(() => {
     setStatus(ResponseStatus.pending)
 
-    cb()
+    handler()
       .then((response) => {
         setData(response)
         setStatus(ResponseStatus.fulfilled)
       })
       .catch((apiError: unknown) => {
         setStatus(ResponseStatus.rejected)
-        if (apiError instanceof Error) {
-          setError(apiError)
-        }
+        setError(apiError instanceof Error ? apiError : new Error('An error occurred'))
       })
-  }, [])
+  }, deps)
 
   return {
     data,
     status,
+    error,
     idle: status === ResponseStatus.idle,
     pending: status === ResponseStatus.pending,
     fulfilled: status === ResponseStatus.fulfilled,
     rejected: status === ResponseStatus.rejected,
   }
 }
+
+export default useAsync

@@ -1,26 +1,25 @@
+'use client'
 import { ReactNode } from 'react'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.scss'
-import ThemeProvider from '@/app/providers/theme-provider'
+import styles from './layout.module.scss'
+import Dropdown from '@/app/components/dropdown/dropdown'
+import { useThemeContext } from '@/app/providers/theme-provider'
+import { themesOptions } from '@/app/constants/theme'
 
-type RootLayoutPropsType = {
+type PageLayoutPropsType = {
   children: ReactNode
 }
 
-const inter = Inter({ subsets: ['latin'] })
+const PageLayout = ({ children }: Readonly<PageLayoutPropsType>) => {
+  const { theme, setTheme } = useThemeContext()
 
-export const metadata: Metadata = {
-  title: 'Articles',
-  description: 'Test app with main page and article page',
+  return (
+    <main className={styles.pageLayout}>
+      <div className={styles.layoutHeader}>
+        <Dropdown active={theme} options={themesOptions} onClick={({ value }) => setTheme(value)} />
+      </div>
+      {children}
+    </main>
+  )
 }
 
-const RootLayout = ({ children }: Readonly<RootLayoutPropsType>) => (
-  <html lang="en">
-    <body className={inter.className}>
-      <ThemeProvider>{children}</ThemeProvider>
-    </body>
-  </html>
-)
-
-export default RootLayout
+export default PageLayout

@@ -1,9 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5a57c9f6-5d29-4f53-9f04-62ee46b4aa58" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/components/dropdown/dropdown.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/components/dropdown/dropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(pages)/article/[articleId]/page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/article/[articleId]/page.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(pages)/article/[articleId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/article/[articleId]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(pages)/layout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/layout.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(pages)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(pages)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/articles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/articles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/mocked-articles.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/mocked-articles.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/article-item/article-item.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/article-item/article-item.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/article-item/article-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/article-item/article-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/loader/loader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/loader/loader.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/loader/loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/loader/loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/tile-list-wrapper/tile-list-wrapper.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/tile-list-wrapper/tile-list-wrapper.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/tile-list-wrapper/tile-list-wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/tile-list-wrapper/tile-list-wrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/constants/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/constants/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/constants/theme-tokens.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/constants/theme-tokens.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/constants/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/constants/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/hooks/useAsync.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/hooks/useAsync.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/providers/theme-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/providers/theme-provider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/types/articles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/articles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/theme-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/theme-utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EvKykot&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:EvKykot/article.git&quot;,
+    &quot;accountId&quot;: &quot;b37c62c1-659d-4606-9438-68164fd3f44d&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2iBc0ClucYsmTjJ0Rur8VmvLtjY" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{}</component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/admin/articles",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "prettier.import.notification.dismissed": "true",
+    "prettierjs.PrettierConfiguration.Package": "/Users/admin/articles/node_modules/prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
+    "ts.external.directory.path": "/Users/admin/articles/node_modules/typescript/lib"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/(pages)" />
+      <recent name="$PROJECT_DIR$/app/(pages)/article/[articleId]" />
+      <recent name="$PROJECT_DIR$/app/constants" />
+      <recent name="$PROJECT_DIR$/app/api" />
+      <recent name="$PROJECT_DIR$/app/utils" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/pages" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17890.13" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a57c9f6-5d29-4f53-9f04-62ee46b4aa58" name="Changes" comment="" />
+      <created>1718967185950</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1718967185950</updated>
+      <workItem from="1718967187077" duration="17516000" />
+      <workItem from="1718991709469" duration="2465000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
 </project>

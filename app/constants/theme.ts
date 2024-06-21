@@ -1,64 +1,58 @@
 export enum Themes {
   light = 'light',
-  dark = 'dark'
+  dark = 'dark',
 }
 
 export type Theme = {
-  key: Themes;
-  title: string;
-  constants: Record<string, string>;
-};
+  key: Themes
+  title: string
+  constants: Record<string, string>
+}
 
-export const DEFAULT_THEME = Themes.light;
+export const DEFAULT_THEME = Themes.dark
 
 export const themesTokensConstants = {
   [Themes.light]: {
-    // header
-    '--header-background': '#6370f0',
-    '--dropdown-background': '#6370f0',
-    '--header-color': '#ffe4c4',
-
-    // checkbox & slider
-    '--checkbox-background': '#6370f0',
-    '--checkbox-color': '#6370f0',
-
-    //table
-    '--table-row-background': '#fff',
-    '--table-row-color': '#808080',
-    '--table-row-border': '1px solid #000',
-
-    //card
-    '--card-background': '#6370f0'
+    // layout
+    '--layout-bg': '#fff',
+    '--layout-color': '#000',
+    // loader
+    '--loader-bg': '#fff',
+    '--loader-border': '#000',
+    // article-item
+    '--article-bg': '#fff',
+    '--article-title': '#000000',
+    '--article-description': '#666666',
+    '--article-border': '#000',
+    // dropdown
+    '--dropdown-color': '#000',
+    '--dropdown-bg': '#fff',
+    '--dropdown-border': '#000',
+    '--dropdown-active-item': '#219',
   },
   [Themes.dark]: {
-    // header
-    '--header-background': '#710C04',
-    '--dropdown-background': '#710C04',
-    '--header-color': '#fff',
-
-    // checkbox & slider
-    '--checkbox-background': '#000000',
-    '--checkbox-color': '#000000',
-
-    //table
-    '--table-row-background': '#fffeee',
-    '--table-row-color': '#000',
-    '--table-row-border': '1px solid #000',
-
-    //card
-    '--card-background': '#710C04'
-  }
-};
+    // layout
+    '--layout-bg': '#000',
+    '--layout-color': '#fff',
+    // loader
+    '--loader-bg': '#000',
+    '--loader-border': '#fff',
+    // article-item
+    '--article-bg': '#000',
+    '--article-title': '#fff',
+    '--article-description': '#666666',
+    '--article-border': '#fff',
+    // dropdown
+    '--dropdown-color': '#fff',
+    '--dropdown-bg': '#000',
+    '--dropdown-border': '#fff',
+    '--dropdown-active-item': '#219',
+  },
+}
 
 export const themes: Theme[] = [
   { key: Themes.light, title: 'Light', constants: themesTokensConstants[Themes.light] },
-  { key: Themes.dark, title: 'Dark', constants: themesTokensConstants[Themes.dark] }
-];
+  { key: Themes.dark, title: 'Dark', constants: themesTokensConstants[Themes.dark] },
+]
 
-export const themesMap = themes.reduce(
-  (acc, theme: Theme) => ({
-    ...acc,
-    [theme.key]: theme
-  }),
-  {} as Record<Themes, Theme>
-);
+export const themesOptions = themes.map(({ key, title }) => ({ key, value: key, label: title }))

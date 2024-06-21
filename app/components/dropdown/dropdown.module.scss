@@ -1,0 +1,40 @@
+@import '../../constants/theme-tokens.module';
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownButton {
+  color: $dropdown-color;
+  padding: 8px;
+  border: 1px solid $dropdown-border;
+  background-color: $dropdown-bg;
+  cursor: pointer;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: $dropdown-bg;
+  min-width: 160px;
+  z-index: 1;
+  padding: 8px;
+  border: 1px solid $dropdown-border;
+
+  &.open {
+    display: block;
+  }
+}
+
+.dropdownItem {
+  color: $dropdown-color;
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+
+  .active {
+    background-color: $dropdown-active-item;
+  }
+}

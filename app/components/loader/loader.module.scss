@@ -1,11 +1,16 @@
-@import '../../constants/themeTokens.module.scss';
+@import '../../constants/theme-tokens.module';
 
 .loader {
-  border: 16px solid $loader-bg-color;
-  background: $loader-bg-color;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  border-top: 5px solid $loader-border;
+  border-bottom: 5px solid $loader-border;
+  background: $loader-bg;
   animation: spin 2s linear infinite;
 }
 

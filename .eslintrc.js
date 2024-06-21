@@ -8,7 +8,7 @@ module.exports = {
         tsconfigRootDir: __dirname,
         sourceType: 'module',
       },
-      plugins: ['react', '@typescript-eslint/eslint-plugin', 'import', 'deprecation'],
+      plugins: ['react', '@typescript-eslint/eslint-plugin', 'import', 'deprecation', 'object-curly-newline'],
       extends: [
         'eslint:recommended',
         'plugin:@typescript-eslint/recommended-type-checked',
@@ -39,7 +39,6 @@ module.exports = {
         },
       },
       rules: {
-        // todo: fix rules start
         '@next/next/no-img-element': 'off',
         '@typescript-eslint/await-thenable': 'off',
         '@typescript-eslint/no-empty-function': 'off',
@@ -72,9 +71,7 @@ module.exports = {
         'unicorn/prefer-module': 'off',
         'unicorn/prefer-query-selector': 'off',
         'unicorn/no-array-reduce': 'off',
-        // todo: fix rules end
         'no-await-in-loop': 'error',
-        // '@typescript-eslint/no-shadow': 'error',
         '@typescript-eslint/switch-exhaustiveness-check': 'error',
         '@typescript-eslint/ban-ts-comment': [
           'error',
@@ -86,33 +83,12 @@ module.exports = {
             minimumDescriptionLength: 3,
           },
         ],
-        // '@typescript-eslint/no-unused-vars': [
-        //   'error',
-        //   { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
-        // ],
-        // '@typescript-eslint/no-misused-promises': [
-        //   'error',
-        //   {
-        //     checksVoidReturn: {
-        //       attributes: false,
-        //       arguments: false,
-        //     },
-        //   },
-        // ],
         'unicorn/prevent-abbreviations': 'off',
         'unicorn/no-null': 'off',
         'unicorn/filename-case': 'off',
-        // idiomatic styled-components uses `import styled from 'styled-components';`
         'import/no-named-as-default': 'off',
         'import/namespace': 'off',
         'import/newline-after-import': ['error', { count: 1 }],
-        // 'import/no-unused-modules': [
-        //   'error',
-        //   {
-        //     unusedExports: true,
-        //     missingExports: true,
-        //   },
-        // ],
         'import/order': [
           'error',
           {
@@ -123,6 +99,15 @@ module.exports = {
           },
         ],
         'jsx-a11y/no-autofocus': ['error', { ignoreNonDOM: true }],
+        'object-curly-newline': [
+          'error',
+          {
+            ObjectExpression: { multiline: true, minProperties: 6 },
+            ObjectPattern: { multiline: true, minProperties: 6 },
+            ImportDeclaration: 'never',
+            ExportDeclaration: { multiline: true, minProperties: 3 },
+          },
+        ],
       },
     },
   ],
@@ -133,13 +118,5 @@ module.exports = {
     jasmine: true,
     jest: true,
   },
-  ignorePatterns: [
-    'dist/*',
-    '.eslintrc.js',
-    'codegen.ts',
-    'gql/generated.ts',
-    'gql/fragments.ts',
-    'package-lock.json',
-    'next-env.d.ts',
-  ],
+  ignorePatterns: ['dist/*', '.eslintrc.js', 'package-lock.json', 'next-env.d.ts'],
 }

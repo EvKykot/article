@@ -1,7 +1,13 @@
-.main {
+.pageLayout {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 6rem;
+  padding: 6rem 12rem;
   min-height: 100vh;
+
+  .layoutHeader {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
 }
