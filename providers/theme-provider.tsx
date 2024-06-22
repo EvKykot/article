@@ -1,7 +1,8 @@
 'use client'
 import React, { FC, ReactNode, createContext, useState, useMemo, useEffect, useContext } from 'react'
-import { themesTokensConstants, DEFAULT_THEME, Themes } from '@/app/constants/theme'
-import { changeThemesConstants } from '@/app/utils/theme-utils'
+import { themesTokensConstants, DEFAULT_THEME, Themes } from '@/constants/theme'
+import { changeThemesConstants } from '@/utils/theme-utils'
+import { NOOP } from '@/constants/noop'
 
 type ThemeContextType = {
   theme: Themes
@@ -10,9 +11,7 @@ type ThemeContextType = {
 
 const defaultThemeContext = {
   theme: DEFAULT_THEME,
-  setTheme: () => {
-    //
-  },
+  setTheme: NOOP,
 }
 
 export const ThemeContext = createContext<ThemeContextType>(defaultThemeContext)
@@ -37,7 +36,9 @@ export const ThemeProvider: FC<ProvidersType> = (props) => {
   )
 
   useEffect(() => {
-    changeThemesConstants(themeTokens)
+    if (typeof window !== 'undefined') {
+      changeThemesConstants(themeTokens)
+    }
   }, [themeTokens])
 
   return <ThemeContext.Provider value={themeContextValue}>{children}</ThemeContext.Provider>

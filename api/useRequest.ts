@@ -10,7 +10,7 @@ export enum ResponseStatus {
 
 type AsyncHandlerType<T> = () => Promise<T>
 
-const useAsync = <T>(handler: AsyncHandlerType<T>, deps: DependencyList = []) => {
+const useRequest = <T>(handler: AsyncHandlerType<T>, deps: DependencyList = []) => {
   const [data, setData] = useState<T | null>(null)
   const [status, setStatus] = useState<ResponseStatus>(ResponseStatus.idle)
   const [error, setError] = useState<Error | null>(null)
@@ -40,4 +40,4 @@ const useAsync = <T>(handler: AsyncHandlerType<T>, deps: DependencyList = []) =>
   }
 }
 
-export default useAsync
+export default useRequest

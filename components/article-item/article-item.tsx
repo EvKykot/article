@@ -1,13 +1,12 @@
 import React from 'react'
 import styles from './article-item.module.scss'
+import { NOOP } from '@/constants/noop'
 
 type ArticleTileProps = {
   title: string
   description: string
   onClick?: () => void
 }
-
-const NOOP = () => {}
 
 const ArticleTile = (props: ArticleTileProps) => {
   const { title, description, onClick = NOOP } = props

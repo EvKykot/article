@@ -1,4 +1,5 @@
-export const checkSupportCSS = () => window.CSS && CSS.supports('color', 'var(--fake-var)')
+export const checkSupportCSS = () =>
+  typeof window !== 'undefined' && window.CSS && CSS.supports('color', 'var(--fake-var)')
 
 export const changeThemesConstants = (themeTokens: Record<string, string>) => {
   const isSupported = checkSupportCSS()

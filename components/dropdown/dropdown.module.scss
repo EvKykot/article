@@ -17,10 +17,11 @@
   display: none;
   position: absolute;
   background-color: $dropdown-bg;
-  min-width: 160px;
   z-index: 1;
   padding: 8px;
   border: 1px solid $dropdown-border;
+  top: 100%;
+  right: 0;
 
   &.open {
     display: block;

@@ -1,6 +1,7 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import styles from './dropdown.module.scss'
+import useOutsideClick from '@/hooks/use-outside-click'
 
 type DropdownOption<T> = {
   key: string
@@ -15,13 +16,18 @@ type DropdownProps<T> = {
 }
 
 const Dropdown = <T extends unknown>({ active, options, onClick }: DropdownProps<T>) => {
+  const ref = useRef(null)
   const [isOpen, setIsOpen] = useState(false)
 
   const activeItem = options.find((option) => option.value === active)
   const label = activeItem ? activeItem.label : 'Select'
 
+  const onClose = () => setIsOpen(false)
+
+  useOutsideClick({ ref, isActive: isOpen, callback: onClose })
+
   return (
-    <div className={styles.dropdown}>
+    <div ref={ref} className={styles.dropdown}>
       <button className={styles.dropdownButton} onClick={() => setIsOpen(!isOpen)}>
         {label}
       </button>

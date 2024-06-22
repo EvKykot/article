@@ -5,33 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a57c9f6-5d29-4f53-9f04-62ee46b4aa58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/components/dropdown/dropdown.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/components/dropdown/dropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierignore" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(pages)/article/[articleId]/page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/article/[articleId]/page.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(pages)/article/[articleId]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/article/[articleId]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(pages)/layout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/layout.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(pages)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(pages)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(pages)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/articles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/articles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/mocked-articles.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/mocked-articles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/article-item/article-item.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/article-item/article-item.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/article-item/article-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/article-item/article-item.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/loader/loader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/loader/loader.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/loader/loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/loader/loader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/tile-list-wrapper/tile-list-wrapper.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/tile-list-wrapper/tile-list-wrapper.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/tile-list-wrapper/tile-list-wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/tile-list-wrapper/tile-list-wrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/constants/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/constants/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/constants/theme-tokens.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/constants/theme-tokens.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/constants/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/constants/theme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.scss" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/hooks/useAsync.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/hooks/useAsync.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/providers/theme-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/providers/theme-provider.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/types/articles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/types/articles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/utils/theme-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/utils/theme-utils.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/with-server-side-props.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/language.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/noop.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/use-outside-click.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/_document.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/article/[articleId]/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/providers/language-provider.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/get-language.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(pages)/article/[articleId]/page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/article/[articleId]/page.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(pages)/article/[articleId]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(pages)/layout.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/layout.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(pages)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(pages)/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/articles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/articles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/axios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/mocked-articles.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/mocked-articles.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/article-item/article-item.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/article-item/article-item.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/article-item/article-item.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/article-item/article-item.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dropdown/dropdown.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/dropdown/dropdown.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/dropdown/dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/dropdown/dropdown.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/loader/loader.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/loader/loader.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/loader/loader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/loader/loader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/tile-list-wrapper/tile-list-wrapper.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/components/tile-list-wrapper/tile-list-wrapper.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/tile-list-wrapper/tile-list-wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/tile-list-wrapper/tile-list-wrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/constants/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/constants/theme-tokens.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/constants/theme-tokens.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/constants/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/pages/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/hooks/useAsync.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/useRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/providers/theme-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/providers/theme-provider.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/types/articles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/articles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/local-storage-utils.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/utils/theme-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/theme-utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -68,7 +78,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/admin/articles",
+    "last_opened_file_path": "/Users/admin/articles/hooks",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -86,13 +96,16 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hooks" />
+      <recent name="$PROJECT_DIR$/providers" />
       <recent name="$PROJECT_DIR$/app/(pages)" />
       <recent name="$PROJECT_DIR$/app/(pages)/article/[articleId]" />
       <recent name="$PROJECT_DIR$/app/constants" />
-      <recent name="$PROJECT_DIR$/app/api" />
-      <recent name="$PROJECT_DIR$/app/utils" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/pages" />
+      <recent name="$PROJECT_DIR$/app/api" />
       <recent name="$PROJECT_DIR$/app/pages" />
     </key>
   </component>
@@ -129,7 +142,8 @@
       <option name="presentableId" value="Default" />
       <updated>1718967185950</updated>
       <workItem from="1718967187077" duration="17516000" />
-      <workItem from="1718991709469" duration="2465000" />
+      <workItem from="1718991709469" duration="4011000" />
+      <workItem from="1719072168589" duration="11073000" />
     </task>
     <servers />
   </component>
