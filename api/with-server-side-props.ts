@@ -2,7 +2,9 @@ import { GetServerSidePropsContext } from 'next'
 import getLanguage from '@/utils/get-language'
 import { Languages } from '@/constants/language'
 
-type AsyncHandlerType<T> = (context: GetServerSidePropsContext, language: Languages) => Promise<T>
+type AsyncHandlerParamsType = GetServerSidePropsContext & { language: Languages }
+
+type AsyncHandlerType<T> = (params: AsyncHandlerParamsType) => Promise<T>
 
 type ServerSidePropsResultWithError<T> = {
   props: {
@@ -19,7 +21,7 @@ const withServerSideProps =
   async (context: GetServerSidePropsContext): Promise<ServerSidePropsResultWithError<T>> => {
     try {
       const language = getLanguage(context)
-      const response = await handler(context, language)
+      const response = await handler({ ...context, language })
       return { props: { data: response, fulfilled: true, rejected: false } }
     } catch (apiError) {
       const error = apiError instanceof Error ? apiError : new Error('An error occurred')

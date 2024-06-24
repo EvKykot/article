@@ -4,6 +4,7 @@ import { getArticle } from '@/api/articles'
 import Loader from '@/components/loader/loader'
 import withServerSideProps from '@/api/with-server-side-props'
 import styles from './page.module.scss'
+import getLanguage from '@/utils/get-language'
 
 type PageContextParams = {
   articleId: string
@@ -11,7 +12,8 @@ type PageContextParams = {
 
 const getServerSideProps = withServerSideProps(async (context) => {
   const { articleId } = context.params as PageContextParams
-  const article = await getArticle(articleId)
+  const language = getLanguage(context)
+  const article = await getArticle({ id: articleId, language })
   return { title: article.title, description: article.description }
 })
 
