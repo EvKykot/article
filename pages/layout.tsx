@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Box, Flex, Heading, useColorMode } from '@chakra-ui/react'
+import { Box, Flex, Heading, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import Cookies from 'js-cookie'
 
 import Dropdown from '@/components/dropdown'
@@ -15,6 +15,9 @@ const Layout = ({ children }: Readonly<LayoutPropsType>) => {
   const { colorMode, setColorMode } = useColorMode()
   const { language, setLanguage } = useLanguageContext()
 
+  const headerBgColor = useColorModeValue('gray.100', 'gray.700')
+  const headerTextColor = useColorModeValue('black', 'white')
+
   const onChangeTheme = (theme: string) => {
     setColorMode(theme)
     if (typeof window !== 'undefined') {
@@ -24,7 +27,14 @@ const Layout = ({ children }: Readonly<LayoutPropsType>) => {
 
   return (
     <Box>
-      <Flex as="header" justifyContent="space-between" alignItems="center" p="4" bg="blue.500" color="white">
+      <Flex
+        as="header"
+        p="4"
+        alignItems="center"
+        justifyContent="space-between"
+        bg={headerBgColor}
+        color={headerTextColor}
+      >
         <Heading size="md">Books</Heading>
         <Flex gap="4">
           <Dropdown value={language} options={languagesOptions} onChange={setLanguage} />

@@ -17,16 +17,28 @@ const lightThemeConfig = {
   },
 }
 
+const components = {
+  HeaderApp: {
+    baseStyle: ({ colorMode }: StyleFunctionProps) => {
+      return {
+        bg: colorMode === 'dark' ? darkThemeConfig.colors.background : lightThemeConfig.colors.background,
+        color: colorMode === 'dark' ? darkThemeConfig.colors.text : lightThemeConfig.colors.text,
+      }
+    },
+  },
+}
+
 const customTheme: ThemeOverride = extendTheme({
   config: {
     initialColorMode: DEFAULT_THEME,
-    useSystemColorMode: false,
+    useSystemColorMode: true,
   },
+  components,
   styles: {
-    global: (props: StyleFunctionProps) => ({
+    global: ({ colorMode }: StyleFunctionProps) => ({
       body: {
-        bg: props.colorMode === 'dark' ? darkThemeConfig.colors.background : lightThemeConfig.colors.background,
-        color: props.colorMode === 'dark' ? darkThemeConfig.colors.text : lightThemeConfig.colors.text,
+        bg: colorMode === 'dark' ? darkThemeConfig.colors.background : lightThemeConfig.colors.background,
+        color: colorMode === 'dark' ? darkThemeConfig.colors.text : lightThemeConfig.colors.text,
       },
     }),
   },

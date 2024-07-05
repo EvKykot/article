@@ -5,37 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a57c9f6-5d29-4f53-9f04-62ee46b4aa58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/books/books.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/dropdown.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/theme-dropdown.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/theme/theme.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/books.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/language.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/articles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/articles/articles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/axios.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/mocked-articles.json" beforeDir="false" afterPath="$PROJECT_DIR$/api/articles/mocked-articles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/with-server-side-props.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/with-server-side-props.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/article-item/article-item.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/article-item/article-item.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/dropdown/dropdown.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/dropdown/dropdown.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loader/loader.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/loader/loader.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/tile-list-wrapper/tile-list-wrapper.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/tile-list-wrapper/tile-list-wrapper.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/language.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/language.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/theme-tokens.module.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/theme.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/article/[articleId]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/article/[articleId]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/article/[articleId]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/book/[bookId]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/article/[articleId]/page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/book/[bookId]/page.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/layout.module.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/providers/theme-provider.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/theme-utils.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/theme/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/theme/theme.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,7 +113,7 @@
       <workItem from="1718991709469" duration="4011000" />
       <workItem from="1719072168589" duration="12277000" />
       <workItem from="1719222762338" duration="3971000" />
-      <workItem from="1720170627940" duration="11075000" />
+      <workItem from="1720170627940" duration="12523000" />
     </task>
     <servers />
   </component>

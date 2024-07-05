@@ -5,13 +5,13 @@ import getLanguage from '@/utils/get-language'
 import styles from './page.module.scss'
 
 type PageContextParams = {
-  articleId: string
+  bookId: string
 }
 
 const getServerSideProps = withServerSideProps(async (context) => {
-  const { articleId } = context.params as PageContextParams
+  const { bookId } = context.params as PageContextParams
   const language = getLanguage(context)
-  const article = await getArticle({ id: articleId, language })
+  const article = await getArticle({ id: bookId, language })
   return { title: article.title, description: article.description }
 })
 
