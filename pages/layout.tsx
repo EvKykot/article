@@ -1,27 +1,38 @@
 import { ReactNode } from 'react'
-import Dropdown from '@/components/dropdown/dropdown'
-import { useThemeContext } from '@/providers/theme-provider'
-import { themesOptions } from '@/constants/theme'
-import styles from './layout.module.scss'
+import { Box, Flex, Heading, useColorMode } from '@chakra-ui/react'
+import Cookies from 'js-cookie'
+
+import Dropdown from '@/components/dropdown'
 import { useLanguageContext } from '@/providers/language-provider'
 import { languagesOptions } from '@/constants/language'
+import { themesOptions } from '@/constants/theme'
 
 type LayoutPropsType = {
   children: ReactNode
 }
 
 const Layout = ({ children }: Readonly<LayoutPropsType>) => {
-  const { theme, setTheme } = useThemeContext()
+  const { colorMode, setColorMode } = useColorMode()
   const { language, setLanguage } = useLanguageContext()
 
+  const onChangeTheme = (theme: string) => {
+    setColorMode(theme)
+    if (typeof window !== 'undefined') {
+      Cookies.set('theme', theme, { expires: 365 })
+    }
+  }
+
   return (
-    <main className={styles.pageLayout}>
-      <div className={styles.layoutHeader}>
-        <Dropdown active={language} options={languagesOptions} onClick={({ value }) => setLanguage(value)} />
-        <Dropdown active={theme} options={themesOptions} onClick={({ value }) => setTheme(value)} />
-      </div>
-      {children}
-    </main>
+    <Box>
+      <Flex as="header" justifyContent="space-between" alignItems="center" p="4" bg="blue.500" color="white">
+        <Heading size="md">Books</Heading>
+        <Flex gap="4">
+          <Dropdown value={language} options={languagesOptions} onChange={setLanguage} />
+          <Dropdown value={colorMode} options={themesOptions} onChange={onChangeTheme} />
+        </Flex>
+      </Flex>
+      <Box as="main">{children}</Box>
+    </Box>
   )
 }
 

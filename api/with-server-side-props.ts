@@ -6,14 +6,22 @@ type AsyncHandlerParamsType = GetServerSidePropsContext & { language: Languages 
 
 type AsyncHandlerType<T> = (params: AsyncHandlerParamsType) => Promise<T>
 
+type ErrorState = {
+  rejected: true
+  error: Error
+  errorMessage: string
+}
+
+type NoErrorState = {
+  rejected: false
+  error: null
+  errorMessage: null
+}
+
 type ServerSidePropsResultWithError<T> = {
   props: {
     data: T
-    fulfilled: boolean
-    rejected: boolean
-    error?: Error
-    errorMessage?: string
-  }
+  } & (ErrorState | NoErrorState)
 }
 
 const withServerSideProps =
@@ -22,16 +30,15 @@ const withServerSideProps =
     try {
       const language = getLanguage(context)
       const response = await handler({ ...context, language })
-      return { props: { data: response, fulfilled: true, rejected: false } }
+      return { props: { data: response, rejected: false, error: null, errorMessage: null } }
     } catch (apiError) {
       const error = apiError instanceof Error ? apiError : new Error('An error occurred')
       return {
         props: {
           data: {} as T,
-          fulfilled: false,
           rejected: true,
           error,
-          errorMessage: error.message,
+          errorMessage: error.message || 'An error occurred',
         },
       }
     }

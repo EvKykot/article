@@ -1,37 +1,29 @@
 import type { InferGetServerSidePropsType } from 'next'
 import { useRouter } from 'next/navigation'
-import { getArticlesList } from '@/api/articles'
-import Loader from '@/components/loader/loader'
-import TileListWrapper from '@/components/tile-list-wrapper/tile-list-wrapper'
-import ArticleTile from '@/components/article-item/article-item'
 import { Routes } from '@/constants/routes'
 import withServerSideProps from '@/api/with-server-side-props'
-import styles from './layout.module.scss'
+import { getBooksList } from '@/api/books/books'
 
-export const getServerSideProps = withServerSideProps(getArticlesList)
+export const getServerSideProps = withServerSideProps(getBooksList)
 
 const HomePage = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  const { data, fulfilled, rejected, errorMessage } = props
+  const { data, rejected, errorMessage } = props
   const router = useRouter()
 
   const onOpenArticle = (id: string) => router.push(`${Routes.article}/${id}`)
 
-  if (!fulfilled && !rejected) {
-    return <Loader />
-  }
-
-  if (rejected && errorMessage) {
-    return <main className={styles.main}>{errorMessage}</main>
+  if (rejected) {
+    return <main>{errorMessage}</main>
   }
 
   return (
     <>
-      <h2>Articles</h2>
-      <TileListWrapper>
-        {(data || []).map(({ id, title, description }) => (
-          <ArticleTile key={id} title={title} description={description} onClick={() => onOpenArticle(id)} />
-        ))}
-      </TileListWrapper>
+      <h2>Books</h2>
+      {/*<TileListWrapper>*/}
+      {/*  {(data || []).map(({ id, title, description }) => (*/}
+      {/*    <BookItem key={id} title={title} description={description} onClick={() => onOpenArticle(id)} />*/}
+      {/*  ))}*/}
+      {/*</TileListWrapper>*/}
     </>
   )
 }

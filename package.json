@@ -1,5 +1,5 @@
 {
-  "name": "articles",
+  "name": "books",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/next-js": "^2.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
     "axios": "^1.7.2",
+    "framer-motion": "^11.2.13",
     "js-cookie": "^3.0.5",
     "next": "14.2.4",
     "next-cookies": "^2.0.3",

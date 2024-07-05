@@ -1,10 +1,8 @@
 import type { InferGetServerSidePropsType } from 'next'
-
-import { getArticle } from '@/api/articles'
-import Loader from '@/components/loader/loader'
+import { getArticle } from '@/api/articles/articles'
 import withServerSideProps from '@/api/with-server-side-props'
-import styles from './page.module.scss'
 import getLanguage from '@/utils/get-language'
+import styles from './page.module.scss'
 
 type PageContextParams = {
   articleId: string
@@ -18,15 +16,10 @@ const getServerSideProps = withServerSideProps(async (context) => {
 })
 
 const ArticlePage = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
-  const { data, fulfilled, rejected, errorMessage } = props
-
+  const { data, rejected, errorMessage } = props
   const { title, description } = data || {}
 
-  if (!fulfilled && !rejected) {
-    return <Loader />
-  }
-
-  if (rejected && errorMessage) {
+  if (rejected) {
     return <div className={styles.pageWrapper}>{errorMessage}</div>
   }
 

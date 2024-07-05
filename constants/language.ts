@@ -16,3 +16,6 @@ export const languages: Language[] = [
 ]
 
 export const languagesOptions = languages.map(({ key, title }) => ({ key, value: key, label: title }))
+
+export const getValidLanguage = (language: string): Languages =>
+  Object.values(Languages).includes(language as Languages) ? (language as Languages) : Languages.english

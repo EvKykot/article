@@ -1,8 +1,7 @@
 import type { AxiosResponse } from 'axios'
 import axios from 'axios'
-import { DEFAULT_LANGUAGE } from '@/constants/language'
 
-const getAxiosGlobalConfig = (baseURL: string, language = DEFAULT_LANGUAGE) => {
+const getAxiosGlobalConfig = (baseURL: string) => {
   const handleSuccess = (response: AxiosResponse) => response.data
 
   const handleError = (error: Record<string, any>) => {
@@ -20,7 +19,6 @@ const getAxiosGlobalConfig = (baseURL: string, language = DEFAULT_LANGUAGE) => {
     baseURL,
     headers: {
       'Content-Type': 'application/json',
-      'Accept-Language': language,
     },
   })
 

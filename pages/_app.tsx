@@ -1,23 +1,27 @@
-import type { AppProps } from 'next/app'
-import Layout from '@/pages/layout'
 import type { Metadata } from 'next'
-import { ThemeProvider } from '@/providers/theme-provider'
+import type { AppProps } from 'next/app'
+import React from 'react'
+import Layout from '@/pages/layout'
+import { ChakraProvider, CSSReset } from '@chakra-ui/react'
 import { LanguageProvider } from '@/providers/language-provider'
 
+import theme from '@/theme/theme'
+
 export const metadata: Metadata = {
-  title: 'Articles',
-  description: 'Test app with main page and article page',
+  title: 'Books',
+  description: 'Here you can find and download some free books',
 }
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <LanguageProvider>
-      <ThemeProvider>
+    <ChakraProvider theme={theme}>
+      <CSSReset />
+      <LanguageProvider>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </ThemeProvider>
-    </LanguageProvider>
+      </LanguageProvider>
+    </ChakraProvider>
   )
 }
 

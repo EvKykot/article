@@ -1,10 +1,9 @@
-import data from './mocked-articles.json'
+import data from '@/api/articles/mocked-articles.json'
 import { ArticleType } from '@/types/articles'
 import { Languages } from '@/constants/language'
+import { LanguageParams } from '@/types/language'
 
 const dataMap: Map<string, ArticleType> = new Map(data.map((article) => [article.id, article]))
-
-type LanguageParams = { language: Languages }
 
 type GetArticleParams = { id: string } & LanguageParams
 
