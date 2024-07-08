@@ -5,7 +5,7 @@ import { Routes } from '@/constants/routes'
 import withServerSideProps from '@/api/with-server-side-props'
 import { getBooksList } from '@/api/books/books'
 
-export const getServerSideProps = withServerSideProps(getBooksList)
+const getServerSideProps = withServerSideProps(getBooksList)
 
 const HomePage = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const { data, rejected, errorMessage } = props
@@ -48,4 +48,5 @@ const HomePage = (props: InferGetServerSidePropsType<typeof getServerSideProps>)
   )
 }
 
+export { getServerSideProps }
 export default HomePage

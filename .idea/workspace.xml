@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a57c9f6-5d29-4f53-9f04-62ee46b4aa58" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/constants/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/article/[articleId]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/book/[bookId]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/article/[articleId]/page.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/book/[bookId]/page.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/books/books.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/books/books.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/book/[bookId]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/book/[bookId]/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/book/[bookId]/page.module.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/theme/theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/theme/theme.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +114,7 @@
       <workItem from="1718991709469" duration="4011000" />
       <workItem from="1719072168589" duration="12277000" />
       <workItem from="1719222762338" duration="3971000" />
-      <workItem from="1720170627940" duration="12523000" />
+      <workItem from="1720170627940" duration="17829000" />
     </task>
     <servers />
   </component>

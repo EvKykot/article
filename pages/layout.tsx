@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { Box, Flex, Heading, useColorMode, useColorModeValue } from '@chakra-ui/react'
+import { Box, Grid, GridItem, Heading, Flex, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import Cookies from 'js-cookie'
 
 import Dropdown from '@/components/dropdown'
@@ -27,20 +27,26 @@ const Layout = ({ children }: Readonly<LayoutPropsType>) => {
 
   return (
     <Box>
-      <Flex
+      <Grid
         as="header"
+        templateColumns="repeat(3, 1fr)"
         p="4"
         alignItems="center"
-        justifyContent="space-between"
         bg={headerBgColor}
         color={headerTextColor}
       >
-        <Heading size="md">Books</Heading>
-        <Flex gap="4">
-          <Dropdown value={language} options={languagesOptions} onChange={setLanguage} />
-          <Dropdown value={colorMode} options={themesOptions} onChange={onChangeTheme} />
-        </Flex>
-      </Flex>
+        <GridItem colStart={2} colEnd={3}>
+          <Heading size="lg" textAlign="center">
+            e-Books
+          </Heading>
+        </GridItem>
+        <GridItem colStart={3} colEnd={4} justifySelf="end">
+          <Flex gap="4">
+            <Dropdown value={language} options={languagesOptions} onChange={setLanguage} />
+            <Dropdown value={colorMode} options={themesOptions} onChange={onChangeTheme} />
+          </Flex>
+        </GridItem>
+      </Grid>
       <Box as="main">{children}</Box>
     </Box>
   )
