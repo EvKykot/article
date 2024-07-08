@@ -2,7 +2,8 @@ import { ReactNode } from 'react'
 import { Box, Grid, GridItem, Heading, Flex, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import Cookies from 'js-cookie'
 
-import Dropdown from '@/components/dropdown'
+import Select from '@/components/select'
+import Breadcrumbs from '@/components/breadcrumbs'
 import { useLanguageContext } from '@/providers/language-provider'
 import { languagesOptions } from '@/constants/language'
 import { themesOptions } from '@/constants/theme'
@@ -15,7 +16,7 @@ const Layout = ({ children }: Readonly<LayoutPropsType>) => {
   const { colorMode, setColorMode } = useColorMode()
   const { language, setLanguage } = useLanguageContext()
 
-  const headerBgColor = useColorModeValue('gray.100', 'gray.700')
+  const headerBgColor = useColorModeValue('pink.700', 'pink.700')
   const headerTextColor = useColorModeValue('black', 'white')
 
   const onChangeTheme = (theme: string) => {
@@ -35,6 +36,9 @@ const Layout = ({ children }: Readonly<LayoutPropsType>) => {
         bg={headerBgColor}
         color={headerTextColor}
       >
+        <GridItem colStart={1} colEnd={2}>
+          <Breadcrumbs />
+        </GridItem>
         <GridItem colStart={2} colEnd={3}>
           <Heading size="lg" textAlign="center">
             e-Books
@@ -42,8 +46,8 @@ const Layout = ({ children }: Readonly<LayoutPropsType>) => {
         </GridItem>
         <GridItem colStart={3} colEnd={4} justifySelf="end">
           <Flex gap="4">
-            <Dropdown value={language} options={languagesOptions} onChange={setLanguage} />
-            <Dropdown value={colorMode} options={themesOptions} onChange={onChangeTheme} />
+            <Select value={language} options={languagesOptions} onChange={setLanguage} />
+            <Select value={colorMode} options={themesOptions} onChange={onChangeTheme} />
           </Flex>
         </GridItem>
       </Grid>

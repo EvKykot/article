@@ -10,17 +10,13 @@ import {
   Heading,
   Tag,
   TagLabel,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Button,
 } from '@chakra-ui/react'
-import { ChevronDownIcon } from '@chakra-ui/icons'
 import type { InferGetServerSidePropsType } from 'next'
 import withServerSideProps from '@/api/with-server-side-props'
 import getLanguage from '@/utils/get-language'
 import { getBook } from '@/api/books/books'
+import MenuDropdown from '@/components/menu-dropdown'
+import { isDefinedOption } from '@/utils/is-defined-option'
 
 type PageContextParams = {
   bookId: string
@@ -32,7 +28,13 @@ const getServerSideProps = withServerSideProps(async (context) => {
   return await getBook({ id: bookId, language })
 })
 
-const BookPage = ({ data: book, rejected, errorMessage }: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+const BookPage = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
+  const { data: book, rejected, errorMessage } = props
+
+  const formatsOptions = Object.entries(book.formats)
+    .map(([format, url]) => ({ label: format, value: url }))
+    .filter(isDefinedOption)
+
   if (rejected) {
     return (
       <Box p={5}>
@@ -99,20 +101,7 @@ const BookPage = ({ data: book, rejected, errorMessage }: InferGetServerSideProp
             <Heading size="xs" textTransform="uppercase" mb={2}>
               Available Formats:
             </Heading>
-            <Menu>
-              <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-                Download
-              </MenuButton>
-              <MenuList>
-                {Object.entries(book.formats).map(([format, url]) =>
-                  url ? (
-                    <MenuItem key={format} as={Link} href={url} isExternal>
-                      {format}
-                    </MenuItem>
-                  ) : null,
-                )}
-              </MenuList>
-            </Menu>
+            <MenuDropdown asHref isExternal label="Download" as={Link} options={formatsOptions} />
           </Box>
         </Stack>
       </CardBody>

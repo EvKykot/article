@@ -12,6 +12,7 @@ const HomePage = (props: InferGetServerSidePropsType<typeof getServerSideProps>)
   const router = useRouter()
 
   const onOpenBook = (id: string) => router.push(`${Routes.book}/${id}`)
+  const handlePagination = (url: string | null) => url && router.push(url)
 
   if (rejected) {
     return (
@@ -20,8 +21,6 @@ const HomePage = (props: InferGetServerSidePropsType<typeof getServerSideProps>)
       </Box>
     )
   }
-
-  const handlePagination = (url: string | null) => url && router.push(url)
 
   return (
     <VStack spacing={4} align="stretch">
