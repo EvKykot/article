@@ -1,9 +1,12 @@
 import type { InferGetServerSidePropsType } from 'next'
 import { Card, CardHeader, CardBody, Stack, StackDivider, Box, Link, Heading, Tag, TagLabel } from '@chakra-ui/react'
+
 import { getBook } from '@/api/books/books'
 import withServerSideProps from '@/api/with-server-side-props'
+
 import { isDefinedOption } from '@/utils/is-defined-option'
 import getLanguage from '@/utils/get-language'
+
 import MenuDropdown from '@/components/menu-dropdown'
 import ErrorBox from '@/components/error-box'
 

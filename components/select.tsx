@@ -1,5 +1,6 @@
 import { ChangeEvent, ReactNode } from 'react'
 import { Select } from '@chakra-ui/react'
+import { Size } from '@/types/size'
 
 type OptionItem<T> = {
   value: T
@@ -8,6 +9,7 @@ type OptionItem<T> = {
 
 type SelectDropdownProps<T> = {
   value?: string
+  size?: Size
   defaultValue?: string
   options: OptionItem<T>[]
   children?: (options: OptionItem<T>) => ReactNode
@@ -15,7 +17,7 @@ type SelectDropdownProps<T> = {
 }
 
 const SelectDropdown = <T extends string | number>(props: SelectDropdownProps<T>) => {
-  const { options, children, value, defaultValue, onChange } = props
+  const { size, options, children, value, defaultValue, onChange } = props
 
   const onSelect = (e: ChangeEvent<HTMLSelectElement>) => {
     const selectedValue = e.target.value
@@ -24,7 +26,7 @@ const SelectDropdown = <T extends string | number>(props: SelectDropdownProps<T>
   }
 
   return (
-    <Select defaultValue={defaultValue} value={value} onChange={onSelect}>
+    <Select size={size} defaultValue={defaultValue} value={value} onChange={onSelect}>
       {options.map((option) => {
         if (children) return children(option)
 
