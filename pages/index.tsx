@@ -1,47 +1,53 @@
-import { Box, Button, Text, VStack, Heading, SimpleGrid, GridItem } from '@chakra-ui/react'
 import { InferGetServerSidePropsType } from 'next'
-import { useRouter } from 'next/navigation'
-import { Routes } from '@/constants/routes'
-import withServerSideProps from '@/api/with-server-side-props'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { useEffect } from 'react'
 import { getBooksList } from '@/api/books/books'
+import withServerSideProps from '@/api/with-server-side-props'
+import getParsedPaginationUrl from '@/utils/pagination-parsing'
+import { Routes } from '@/constants/routes'
+import { Box, Flex, VStack } from '@chakra-ui/react'
+import BookCard from '@/components/book-card'
+import Pagination from '@/components/pagination'
+import ErrorBox from '@/components/error-box'
 
-const getServerSideProps = withServerSideProps(getBooksList)
+const getServerSideProps = withServerSideProps((context) =>
+  getBooksList({ ...context, page: Number(context.query.page) || 1 }),
+)
 
 const HomePage = (props: InferGetServerSidePropsType<typeof getServerSideProps>) => {
   const { data, rejected, errorMessage } = props
   const router = useRouter()
+  const queryParams = useSearchParams()
+  const currentPage = queryParams.get('page')
+
+  const { results, previous, next, count } = data
+
+  useEffect(() => {
+    if (!currentPage) router.replace('/?page=1')
+  }, [router, currentPage])
 
   const onOpenBook = (id: string) => router.push(`${Routes.book}/${id}`)
-  const handlePagination = (url: string | null) => url && router.push(url)
+  const onOpenPage = (pageNumber: number) => router.push(`${Routes.home}?page=${pageNumber}`)
 
   if (rejected) {
-    return (
-      <Box p={5}>
-        <Text>{errorMessage}</Text>
-      </Box>
-    )
+    return <ErrorBox message={errorMessage} />
   }
 
   return (
     <VStack spacing={4} align="stretch">
-      <SimpleGrid columns={3} spacing={10} p={5}>
-        {data?.results.map((book) => (
-          <GridItem key={book.id} p={5} shadow="md" borderWidth="1px">
-            <Heading fontSize="xl">{book.title}</Heading>
-            <Text mt={4}>Authors: {book.authors.map((author) => author.name).join(', ')}</Text>
-            <Button mt={4} onClick={() => onOpenBook(book.id)}>
-              View Details
-            </Button>
-          </GridItem>
+      <Flex wrap="wrap" justifyContent="center" gap="10" p={5}>
+        {results.map((book) => (
+          <BookCard key={book.id} book={book} onOpenBook={onOpenBook} />
         ))}
-      </SimpleGrid>
-      <Box p={5} display="flex" justifyContent="space-between">
-        <Button onClick={() => handlePagination(data?.previous)} isDisabled={!data?.previous}>
-          Previous
-        </Button>
-        <Button onClick={() => handlePagination(data?.next)} isDisabled={!data?.next}>
-          Next
-        </Button>
+      </Flex>
+      <Box p={5} display="flex" justifyContent="center">
+        <Pagination
+          totalCount={count}
+          countPerPage={32}
+          previousPageNumber={getParsedPaginationUrl(previous)}
+          nextPageNumber={getParsedPaginationUrl(next)}
+          onOpenPage={onOpenPage}
+        />
       </Box>
     </VStack>
   )

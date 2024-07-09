@@ -16,7 +16,7 @@ const Layout = ({ children }: Readonly<LayoutPropsType>) => {
   const { colorMode, setColorMode } = useColorMode()
   const { language, setLanguage } = useLanguageContext()
 
-  const headerBgColor = useColorModeValue('pink.700', 'pink.700')
+  const headerBgColor = useColorModeValue('blue.200', 'blue.700')
   const headerTextColor = useColorModeValue('black', 'white')
 
   const onChangeTheme = (theme: string) => {

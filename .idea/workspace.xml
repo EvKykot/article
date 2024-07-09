@@ -5,16 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a57c9f6-5d29-4f53-9f04-62ee46b4aa58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/breadcrumbs.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/menu-dropdown.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/is-defined-option.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/articles/articles.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/articles/mocked-articles.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/select.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/error-box.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/pagination.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/pagination-parsing.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/books/books.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/books/books.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/breadcrumbs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/breadcrumbs.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/book/[bookId]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/book/[bookId]/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/articles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/books.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/books.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +48,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/admin/articles/api/books",
+    "last_opened_file_path": "/Users/admin/articles",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -117,7 +116,8 @@
       <workItem from="1718991709469" duration="4011000" />
       <workItem from="1719072168589" duration="12277000" />
       <workItem from="1719222762338" duration="3971000" />
-      <workItem from="1720170627940" duration="22381000" />
+      <workItem from="1720170627940" duration="23361000" />
+      <workItem from="1720515843245" duration="4971000" />
     </task>
     <servers />
   </component>

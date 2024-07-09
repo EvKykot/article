@@ -1,4 +1,4 @@
-enum DownloadFormatsEnum {
+export enum FormatsEnum {
   epubZip = 'application/epub+zip',
   octetStream = 'application/octet-stream',
   rdfXml = 'application/rdf+xml',
@@ -8,7 +8,7 @@ enum DownloadFormatsEnum {
   plain = 'text/plain; charset=us-ascii',
 }
 
-type FormatsType = Record<DownloadFormatsEnum, string | undefined>
+type FormatsType = Record<FormatsEnum, string | undefined>
 
 export type AuthorType = {
   birth_year: number

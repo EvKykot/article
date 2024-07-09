@@ -1,22 +1,11 @@
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  Stack,
-  StackDivider,
-  Box,
-  Text,
-  Link,
-  Heading,
-  Tag,
-  TagLabel,
-} from '@chakra-ui/react'
 import type { InferGetServerSidePropsType } from 'next'
-import withServerSideProps from '@/api/with-server-side-props'
-import getLanguage from '@/utils/get-language'
+import { Card, CardHeader, CardBody, Stack, StackDivider, Box, Link, Heading, Tag, TagLabel } from '@chakra-ui/react'
 import { getBook } from '@/api/books/books'
-import MenuDropdown from '@/components/menu-dropdown'
+import withServerSideProps from '@/api/with-server-side-props'
 import { isDefinedOption } from '@/utils/is-defined-option'
+import getLanguage from '@/utils/get-language'
+import MenuDropdown from '@/components/menu-dropdown'
+import ErrorBox from '@/components/error-box'
 
 type PageContextParams = {
   bookId: string
@@ -36,11 +25,7 @@ const BookPage = (props: InferGetServerSidePropsType<typeof getServerSideProps>)
     .filter(isDefinedOption)
 
   if (rejected) {
-    return (
-      <Box p={5}>
-        <Text>{errorMessage}</Text>
-      </Box>
-    )
+    return <ErrorBox message={errorMessage} />
   }
 
   return (

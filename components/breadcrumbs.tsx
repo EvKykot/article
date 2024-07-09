@@ -5,6 +5,8 @@ import { useRouter } from 'next/router'
 const Breadcrumbs = () => {
   const router = useRouter()
 
+  const isHome = router.asPath === '/'
+
   const breadcrumbs = useMemo(() => {
     const pathnames = router.asPath.split('/').filter((x) => x)
     let breadcrumbItems = [{ name: 'Home', href: '/' }]
