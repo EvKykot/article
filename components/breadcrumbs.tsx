@@ -16,6 +16,10 @@ const Breadcrumbs = () => {
       breadcrumbItems.push({ name: `book : ${bookId}`, href: '' })
     }
 
+    if (pathnames[0] === 'chart') {
+      breadcrumbItems.push({ name: 'Chart', href: '' })
+    }
+
     return breadcrumbItems
   }, [router.asPath])
 

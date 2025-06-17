@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a57c9f6-5d29-4f53-9f04-62ee46b4aa58" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/search-box.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants/topics.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/size.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/books/books.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/books/books.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/menu-dropdown.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/menu-dropdown.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/select.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/book/[bookId]/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/book/[bookId]/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/smooth-line-chart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/breadcrumbs.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/breadcrumbs.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,8 +43,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/admin/articles",
+    "js.debugger.nextJs.config.created.client": "true",
+    "last_opened_file_path": "/Users/admin/articles/components",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -57,6 +56,7 @@
     "nodejs_interpreter_path": "node",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
+    "npm.start.executor": "Run",
     "prettier.import.notification.dismissed": "true",
     "prettierjs.PrettierConfiguration.Package": "/Users/admin/articles/node_modules/prettier",
     "settings.editor.selected.configurable": "settings.javascript.prettier",
@@ -65,11 +65,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components" />
       <recent name="$PROJECT_DIR$/api/books" />
       <recent name="$PROJECT_DIR$/hooks" />
       <recent name="$PROJECT_DIR$/providers" />
       <recent name="$PROJECT_DIR$/app/(pages)" />
-      <recent name="$PROJECT_DIR$/app/(pages)/article/[articleId]" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/api/articles" />
@@ -79,7 +79,10 @@
       <recent name="$PROJECT_DIR$/app/pages" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="Next.js: debug client-side" type="JavascriptDebugType" uri="http://localhost:3000/">
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -90,16 +93,27 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.17890.13" />
+        <option value="bundled-js-predefined-d6986cc7102b-6a121458b545-JavaScript-WS-251.25410.117" />
       </set>
     </attachedChunks>
   </component>
@@ -116,7 +130,10 @@
       <workItem from="1719072168589" duration="12277000" />
       <workItem from="1719222762338" duration="3971000" />
       <workItem from="1720170627940" duration="23361000" />
-      <workItem from="1720515843245" duration="18800000" />
+      <workItem from="1720515843245" duration="22061000" />
+      <workItem from="1722432019451" duration="108000" />
+      <workItem from="1736541636611" duration="2777000" />
+      <workItem from="1750147445700" duration="3836000" />
     </task>
     <servers />
   </component>
